@@ -1,0 +1,28 @@
+<% include template/header %>
+
+<h3> San pham da xem </h3>
+
+<!-- content -->
+<div class="ish-row ish-content ish-portfolio ish-macy">
+
+
+<% data.forEach(function(motsanpham){   
+	
+	%>
+
+	<a class="ish-portfolio-item ish--tc13 ish-portfolio-<%= motsanpham.cat %>" href="/<%= motsanpham.duongDanSeo %>.<%= motsanpham._id %>">
+		<div class="ish-portfolio-item__image-container">
+			<img class="ish-portfolio-item__image" src=".<%= motsanpham.bigImage %>" alt="business cards">
+		</div>
+		<div class="ish-portfolio-item__desc">
+			<span class="ish-portfolio-item__title"><%= motsanpham.title %></span>
+			<span class="ish-portfolio-item__subtitle"><%= motsanpham.cat %></span>
+		</div>
+	</a>
+
+<% }) %>
+
+
+</div>
+
+<% include template/footer %>

@@ -1,0 +1,22 @@
+[{
+  "_id": {
+    "$oid": "61fa96e33b468c106d94a056"
+  },
+  "tenwebsite": "tiki",
+  "linkwebsite": "http:/tiki.vn",
+  "linhvuc": "bachhoa"
+},{
+  "_id": {
+    "$oid": "61fa99000ce7682927f5369c"
+  },
+  "tenwebsite": "hungbui",
+  "linkwebsite": "http:/hungbui.vn",
+  "linhvuc": "trai dep va nhieu tien"
+},{
+  "_id": {
+    "$oid": "61faa90d0ce7682927f5369d"
+  },
+  "tenwebsite": "amazon",
+  "linkwebsite": "http://amazon.com",
+  "giaodien": "xau"
+}]

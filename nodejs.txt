@@ -1,0 +1,85 @@
++, day len
++,params : duong dan
++,body : o form
+PS G:\NodeJS\npm02> npm init
+PS G:\NodeJS\npm02> npm login
+PS G:\NodeJS\npm02> npm publish
+
++, tai ve 
+PS G:\NodeJS\npm03> npm i hug01
++, ejs
+PS G:\NodeJS\011SERVER\kenh14> express kenh14 -e
+
+? : co cung dc k co cung dc 
+* : tat ca ki tu
++, <form action="" method="post" enctype="multipart/form-data" >
++, npm install --save multer
+
++,if(file.originalname.math(/\.(jpg|png|gif|jpeg)$/)){
+    cb(new Error('ban chi dc upload file anh!'));
+  }else{
+    cb(null,true)
+  }
+-------------------------------------mongodb--------------------------
++,mongod
++,mongo
++,show dbs
++,show collections
++,use <tencsdl> tao moi hoac goi lai
++,db.createCollection('tenTable')
++,db.dropDatabase()
++,db.danhsachwebsite.insert({"tenwebsite":"tiki","linkwebsite":"http:/tiki.vn","linkvua":"bachhoa"})  
++,db.danhsachwebsite.find()
++, db.danhsachwebsite.find().pretty() // hien thi dep hon
++, 	> var motweb={}
+	> motweb.tenwebsite="amazon"
+	amazon
+	> motweb.linkwebsite="http://amazon.com"
+	http://amazon.com
+	> motweb.linkvua="ban hang"
+	ban hang
+	> db.danhsachwebsite.insert(motweb)
++,db.danhsachwebsite.update({"tenwebsite":"amazon"},{$set:{"linkvua":"ban cave"}},{multi:true})
++, XOA 1 truong:db.danhsachwebsite.update({"tenwebsite":"amazon"},{$unset:{"linkvua":"ban cave"}},{multi:true})
+
++, $set :dat lai gia tri
++,$unset : bo di gia tri
++, multi : true => xoa nhieu truong hop thoa man
++, multi : false => xoa truong hop dau tien thoa man
+
++,--upsert---:  db.danhsachwebsite.update({"tenwebsite":"amazon"},{$set:{"giaodien":"xau"}},{multi:true ,upsert:true})
+		+, neu co "tenwebsite":"amazon" thi them "giaodien":"xau"
+		+, neu k co "tenwebsite":"amazon" thi them 1 document moi
++,--rename---:	db.danhsachwebsite.update({"tenwebsite":"amazon"},{$rename:{"linkvua":"linhvuc"}},{multi:true})
+		or All voi : db.danhsachwebsite.update({},{$rename:{"linkvua":"linhvuc"}},{multi:true})
++,--gte------:	db.danhsachwebsite.update({"tuoi":{$gte:15}},{$set:{"nhadautu":"vcrop"}},{multi:true})
+
++,--remove---:	db.danhsachwebsite.remove({"tenwebsite":"amazon123"},{justOne:true})
+
+
++,---connect database-- : const MongoClient  = require('mongodb').MongoClient;
+			const assert = require('assert');
+
+			// Connection URL
+			const url = 'mongodb://localhost:27017';
+
+			//Database Name
+			const dbName='contact'
+
+			MongoClient.connect(url,function(arr,client){
+  			assert.equal(null,arr);
+  			console.log("ket noi thanh cong");
+
+  			const db =client.db(dbName);
+
+  			client.close();
+			});
+----------------------------------------mongoose-------------------------------
++,npm install mongoose
+
+----------------------------------------multer-------------------------------
++, npm install multer
++, npm install dropzone
++,dropzone node js express
+
+
